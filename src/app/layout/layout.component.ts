@@ -4,7 +4,7 @@ import {navigation} from './../_nav';
 @Component({
     selector: 'app-layout',
     templateUrl: './layout.component.html',
-    styleUrls: ['./layout.component.css']
+    styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit {
 
@@ -12,7 +12,7 @@ export class LayoutComponent implements OnInit {
 
     isCollapsed = false;
     isReverseArrow = false;
-    width = 240;
+    width = 200;
     constructor() {
     }
 
