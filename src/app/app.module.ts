@@ -11,6 +11,7 @@ import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import {LoginComponent} from './views/login/login.component';
 import {LayoutComponent} from './views/layout/layout.component';
+import { ArticleComponent } from './views/article/article.component';
 
 registerLocaleData(zh);
 
@@ -18,7 +19,8 @@ registerLocaleData(zh);
     declarations: [
         AppComponent,
         LoginComponent,
-        LayoutComponent
+        LayoutComponent,
+        ArticleComponent
     ],
     imports: [
         BrowserModule,
