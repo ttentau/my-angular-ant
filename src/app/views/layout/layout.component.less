@@ -1,0 +1,62 @@
+
+nz-header {
+    background: #fff;
+    padding: 0;
+    display: flex;
+
+    .left {
+        width: 240px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .left1 {
+            display: flex;
+
+            i {
+                line-height: 60px;
+                margin-right: 20px;
+            }
+        }
+
+        .right1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 40px;
+
+            .notice {
+                font-size: 20px;
+                cursor: pointer;
+            }
+
+            nz-avatar {
+                margin-right: 20px;
+            }
+
+            .user-card {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+nz-layout {
+    height: 100%;
+
+    nz-sider {
+        overflow: auto;
+    }
+
+    nz-content {
+        padding: 20px;
+    }
+}
+
+

@@ -1,0 +1,63 @@
+<nz-layout>
+    <nz-header>
+        <div class="left">
+            <span>LOGO</span>
+        </div>
+        <div class="right">
+            <div class="left1">
+                <i class="trigger cp" nz-icon [type]="isCollapsed ? 'menu-unfold' : 'menu-fold'" (click)="isCollapsed = !isCollapsed"></i>
+                <nz-breadcrumb style="margin:16px 0;">
+                    <nz-breadcrumb-item>User</nz-breadcrumb-item>
+                    <nz-breadcrumb-item>Bill</nz-breadcrumb-item>
+                </nz-breadcrumb>
+            </div>
+            <div class="right1">
+                <ng-template #contentTemplate>
+                    <ul class="user-card">
+                        <li (click)="logout()">
+                            <i nz-icon type="check"></i> 退出登录
+                        </li>
+                    </ul>
+                </ng-template>
+
+                <nz-avatar nzIcon="user" style="background-color:#87d068;" nz-popover nzTitle="admin" [nzContent]="contentTemplate"></nz-avatar>
+                <i class="notice" nz-icon nzType="bell" nzTheme="outline" (click)="open()"></i>
+                <nz-drawer [nzClosable]="false" [nzVisible]="visible" nzPlacement="right" nzTitle="Basic Drawer" (nzOnClose)="close()">
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </nz-drawer>
+            </div>
+        </div>
+    </nz-header>
+    <nz-layout>
+        <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width" [nzReverseArrow]="isReverseArrow">
+            <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+                <li nz-submenu>
+                    <span title><i nz-icon type="user"></i><span class="nav-text">User</span></span>
+                    <ul>
+                        <li nz-menu-item>Tom</li>
+                        <li nz-menu-item>Bill</li>
+                        <li nz-menu-item>Alex</li>
+                    </ul>
+                </li>
+                <li nz-submenu>
+                    <span title><i nz-icon type="team"></i><span class="nav-text">Team</span></span>
+                    <ul>
+                        <li nz-menu-item>Team 1</li>
+                        <li nz-menu-item>Team 2</li>
+                    </ul>
+                </li>
+
+                <li nz-menu-item>
+                    <span><i nz-icon type="file"></i><span class="nav-text">File</span></span>
+                </li>
+            </ul>
+        </nz-sider>
+        <nz-content>
+            <div style="padding:24px; background: #fff; min-height: 3360px;">
+
+            </div>
+        </nz-content>
+    </nz-layout>
+</nz-layout>
